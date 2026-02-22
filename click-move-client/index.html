@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Click-to-Move Prototype</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <main class="layout">
+    <section class="panel">
+      <h1>Click-to-Move Prototype</h1>
+      <p>
+        Click any walkable tile to move. Obstacles are generated randomly and route solving
+        uses A* pathfinding inspired by the server-side movement code in this repository.
+      </p>
+      <div class="controls">
+        <button id="regen">Regenerate Map</button>
+        <button id="toggle-grid">Toggle Grid</button>
+      </div>
+      <ul class="legend">
+        <li><span class="swatch player"></span>Player</li>
+        <li><span class="swatch wall"></span>Obstacle</li>
+        <li><span class="swatch path"></span>Current Path</li>
+      </ul>
+      <p id="status" class="status">Ready.</p>
+    </section>
+
+    <section class="game-wrap">
+      <canvas id="game" width="768" height="512" aria-label="game map"></canvas>
+    </section>
+  </main>
+
+  <script type="module" src="./src/app.js"></script>
+</body>
+</html>
